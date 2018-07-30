@@ -1,0 +1,8 @@
+
+body{
+background: linear-gradient(rgba(0, 0, 0, 1), rgba(68, 0, 0, 1));
+background-position: bottom;
+background-repeat: repeat-x;
+color: white;
+text-align: center;
+}
