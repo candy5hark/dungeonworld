@@ -103,6 +103,55 @@ function populate($servername, $username, $password, $dbname){
     echo "Error: " . $sql . "<br>" . $conn->error;
     }
 
+    $sql = "INSERT INTO items (name, description, room_id) VALUES ('A key', 'A little bit rusted,', " .$roomid. " )";
+    if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully\n";
+    } else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+
+    $sql = "INSERT INTO items (name, description, room_id) VALUES ('A note', 'It reads: Beware the Dark'," .$roomid. " )";
+    if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully\n";
+    } else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+
+    $sql = "INSERT INTO rooms (description, coordX, coordY)
+    VALUES ('A drippy, mossy room with blue-green foliage.', 1, 0)";
+
+    if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully\n";
+    } else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+
+    $sql = "INSERT INTO rooms (description, coordX, coordY)
+    VALUES ('A room with a purple haze near the ground.', 0, 1)";
+
+    if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully\n";
+    } else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+
+    $sql = "INSERT INTO rooms (description, coordX, coordY)
+    VALUES ('A room with a barred off window, light filtering though.', 0, -1)";
+
+    if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully\n";
+    } else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+
+    $sql = "INSERT INTO rooms (description, coordX, coordY)
+    VALUES ('A room with a table that has many knife marks.', -1, 0)";
+
+    if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully\n";
+    } else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+    }
 
 }
 
